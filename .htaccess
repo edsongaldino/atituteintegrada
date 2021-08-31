@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteBase /
+Options +FollowSymLinks
+RewriteCond %{HTTP_HOST} ^atitudeintegrada.com.br [NC]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ https://www.atitudeintegrada.com.br/$1 [R=301,L] 
+
+RewriteRule ^confirma-contato/([a-z0-9-]+)/([a-z0-9-]+)/?$ index.php?envio=$1&mm=$2 [NC]
