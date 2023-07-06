@@ -49,11 +49,6 @@ $numeros_recaptcha = substr(str_shuffle("0123456789"), 0, 3);
 	
 	<body>
 
-		<audio controls autoplay>
-			<source src="audio/wonder.ogg" type="audio/ogg">
-			<source src="audio/wonder.mp3" type="audio/mpeg">
-		</audio>
-
 		<?php if($status_envio == "erro"){?>
 		<div class="box-message">
 			<div class="alert alert-warning alert-dismissible show" role="alert">
@@ -79,10 +74,6 @@ $numeros_recaptcha = substr(str_shuffle("0123456789"), 0, 3);
 
 		<!-- Answer for the newsletter form is displayed in the next div, do not remove it. -->
 		
-
-		<!-- YouTube link -->
-		<a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/JpSy1zedY4E',containment:'body',autoPlay:true, mute:true, startAt:0, stopAt:0, opacity:0.9}"></a>
-
 		<!-- Page preloader -->
 		<div id="loading">
 			<div id="preloader">
@@ -140,28 +131,6 @@ $numeros_recaptcha = substr(str_shuffle("0123456789"), 0, 3);
 
 		</section>
 		<!-- END - Home/Left Part -->
-
-		<!-- OPEN - Player control -->
-		<nav id="player-nav">
-			<ul>
-				<li data-toggle="tooltip" data-placement="top" data-title="Play" data-trigger="hover">
-					<a onclick="$('#bgndVideo').playYTP()"><i class="fa fa-play"></i></a>
-				</li>
-
-				<li data-toggle="tooltip" data-placement="top" data-title="Pause" data-trigger="hover">
-					<a onclick="$('#bgndVideo').pauseYTP()"><i class="fa fa-pause"></i></a>
-				</li>
-
-				<li class="full-play" data-toggle="tooltip" data-placement="top" data-title="Fullscreen" data-trigger="hover">
-					<a class="expand-player"><i class="fa fa-expand"></i></a>
-				</li>
-
-				<li class="comp-play display-none" data-toggle="tooltip" data-placement="top" data-title="Reduce" data-trigger="hover">
-					<a class="compress-player"><i class="fa fa-compress"></i></a>
-				</li>
-
-			</ul>
-		</nav> <!-- CLOSE - Player control -->
 
 		<!-- START - More Informations/Right Part -->
 		<section id="right-side" class="hide-right">
