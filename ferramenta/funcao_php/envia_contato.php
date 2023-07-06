@@ -6,13 +6,13 @@ function envia_contato($nome,$email,$telefone,$assunto,$mensagem) {
 
 	$corpo_mensagem = "
 			
-			<p>Ola,<br/> ".($nome)." esteve visitando seu site e lhe enviou uma mensagem.</p>
+			<p>Ola,<br/> ".$nome." esteve visitando seu site e lhe enviou uma mensagem.</p>
 			<p>
-			<b>Nome</b>: ".($nome)."<br>
+			<b>Nome</b>: ".$nome."<br>
 			<b>E-mail</b>: ".$email."<br>
 			<b>Telefone</b>: ".$telefone."<br>
-			<b>Assunto</b>: ".($assunto)."<br>
-			<b>Mensagem</b>: ".($mensagem)."<br>
+			<b>Assunto</b>: ".$assunto."<br>
+			<b>Mensagem</b>: ".$mensagem."<br>
 			</p>
 			<p>Este e um e-mail enviado pelo site www.atitudeintegrada.com.br.</p>
 			<p>Atitude Integrada</p>
@@ -40,7 +40,7 @@ function envia_contato($nome,$email,$telefone,$assunto,$mensagem) {
 		// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=    
 		$mail->SetFrom('atendimento@atitudeintegrada.com.br', 'Site'); //Seu e-mail
 		$mail->AddReplyTo($email, $nome); //Seu e-mail
-		$mail->Subject = ($assunto);//Assunto do e-mail
+		$mail->Subject = $assunto;//Assunto do e-mail
 	
 	
 		//Define os destinatário(s)
