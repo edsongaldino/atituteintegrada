@@ -67,6 +67,11 @@ footer, header, hgroup, menu, nav, section, main {
 
 body {
   line-height: 1;
+  background: url(img/bg-site.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 ol, ul {
