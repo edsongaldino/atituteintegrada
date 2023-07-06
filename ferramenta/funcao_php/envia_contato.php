@@ -2,8 +2,7 @@
 // função para salvar contato
 function envia_contato($nome,$email,$telefone,$assunto,$mensagem) {
 	
-
-	$corpo_mensagem = "
+		$corpo_mensagem = "
 			
 			<p>Ola,<br/> ".$nome." esteve visitando seu site e lhe enviou uma mensagem.</p>
 			<p>
@@ -17,57 +16,28 @@ function envia_contato($nome,$email,$telefone,$assunto,$mensagem) {
 			<p>Atitude Integrada</p>
 						
 			";
-	
-	// Inicia a classe PHPMailer
-	$mail = new PHPMailer(true);
 
-	// Define os dados do servidor e tipo de conexão
-	// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-	$mail->IsSMTP(); // Define que a mensagem será SMTP
-	
-		try {
-		$mail->SMTPSecure = "ssl"; // tbm já tentei tls
-		$mail->SMTPDebug = 1;
-		$mail->CharSet = 'UTF-8';
-		$mail->Host = "email-ssl.com.br"; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
-		$mail->SMTPAuth   = true;  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
-		$mail->Port       = 587; //  Usar 587 porta SMTP
-		$mail->Username = 'formulario@atitudeintegrada.com.br'; // Usuário do servidor SMTP (endereço de email)
-		$mail->Password = 'A=gY*6d([M@L'; // Senha do servidor SMTP (senha do email usado)
-	
-		//Define o remetente
-		// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=    
-		$mail->SetFrom('atendimento@atitudeintegrada.com.br', 'Site'); //Seu e-mail
-		$mail->AddReplyTo($email, $nome); //Seu e-mail
-		$mail->Subject = $assunto;//Assunto do e-mail
-	
-	
-		//Define os destinatário(s)
-		//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-		$mail->AddAddress('atendimento@atitudeintegrada.com.br', 'Atitude Integrada');
-		$mail->AddBCC('edsongaldino@datapix.com.br', 'Datapix Tecnologia'); // Copia
-		//Campos abaixo são opcionais 
-		//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-		//$mail->AddCC('destinarario@dominio.com.br', 'Destinatario'); // Copia
-		//$mail->AddBCC('destinatario_oculto@dominio.com.br', 'Destinatario2`'); // Cópia Oculta
-		//$mail->AddAttachment('images/phpmailer.gif');      // Adicionar um anexo
-	
-	
-		//Define o corpo do email
-		$mail->MsgHTML($corpo_mensagem); 
-	
-		////Caso queira colocar o conteudo de um arquivo utilize o método abaixo ao invés da mensagem no corpo do e-mail.
-		//$mail->MsgHTML(file_get_contents('arquivo.html'));
-	
-		$mail->Send();
-		//echo "Mensagem enviada com sucesso</p>\n";
-		return true;
-	
-		//caso apresente algum erro é apresentado abaixo com essa exceção.
-		}catch (phpmailerException $e) {
-			echo $e->errorMessage(); //Mensagem de erro costumizada do PHPMailer
-		return false;
-	}
+		$mailer = new PHPMailer();
+		$mailer->IsSMTP();
+		$mailer->SMTPDebug = 0;
+		$mailer->CharSet = 'UTF-8';
+		$mailer->Port = 587; //Indica a porta de conexão 
+		$mailer->Host = 'email-ssl.com.br';//Endereço do Host do SMTP 
+		$mailer->SMTPAuth = true; //define se haverá ou não autenticação 
+		$mailer->Username = 'formulario@atitudeintegrada.com.br'; //Login de autenticação do SMTP
+		$mailer->Password = 'A=gY*6d([M@L'; //Senha de autenticação do SMTP
+		$mailer->FromName = 'Atitude Integrada'; //Nome que será exibido
+		$mailer->From = 'atendimento@atitudeintegrada.com.br'; //Obrigatório ser 
+		$mailer->AddAddress("atendimento@atitudeintegrada.com.br", "Atitude Integrada");
+		$mailer->AddCC($email, $nome);
+		$mailer->Subject = "Contato - Atitude Integrada";
+		$mailer->MsgHTML($corpo_mensagem);   
+
+		if($mailer->send()) {
+			return true;
+		} else {
+			return false;
+		}
 
 }
 ?>
