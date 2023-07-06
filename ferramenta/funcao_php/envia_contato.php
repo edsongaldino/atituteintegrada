@@ -1,5 +1,4 @@
 <?php
-ini_set('display_errors', 1);
 // função para salvar contato
 function envia_contato($nome,$email,$telefone,$assunto,$mensagem) {
 	
