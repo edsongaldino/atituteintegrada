@@ -1,5 +1,5 @@
 <?php
-
+ini_set('display_errors', 1);
 // função para salvar contato
 function envia_contato($nome,$email,$telefone,$assunto,$mensagem) {
 	
@@ -28,6 +28,8 @@ function envia_contato($nome,$email,$telefone,$assunto,$mensagem) {
 	
 		try {
 		$mail->SMTPSecure = "ssl"; // tbm já tentei tls
+		$mail->SMTPDebug = 1;
+		$mail->CharSet = 'UTF-8';
 		$mail->Host = "email-ssl.com.br"; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
 		$mail->SMTPAuth   = true;  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
 		$mail->Port       = 587; //  Usar 587 porta SMTP
