@@ -123,9 +123,9 @@ $numeros_recaptcha = substr(str_shuffle("0123456789"), 0, 3);
 			<!-- Social icons -->
 			<div class="social-icons">
 
-				<a href="https://wa.me/5565999091975?text=Gostaria de mais informações sobre o treinamento"><i class="fa fa-whatsapp fa-2x"></i></a>
-				<a href="#"><i class="fa fa-facebook fa-2x"></i></a>
-				<a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+				<a href="https://wa.me/5565999091975?text=Gostaria de mais informações sobre o treinamento"><i class="fa fa-whatsapp fa-3x"></i></a>
+				<a href="#"><i class="fa fa-facebook fa-3x"></i></a>
+				<a href="#"><i class="fa fa-instagram fa-3x"></i></a>
 				
 
 			</div>

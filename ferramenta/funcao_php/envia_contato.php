@@ -6,13 +6,13 @@ function envia_contato($nome,$email,$telefone,$assunto,$mensagem) {
 
 	$corpo_mensagem = "
 			
-			<p>Ola,<br/> ".utf8_decode($nome)." esteve visitando seu site e lhe enviou uma mensagem.</p>
+			<p>Ola,<br/> ".($nome)." esteve visitando seu site e lhe enviou uma mensagem.</p>
 			<p>
-			<b>Nome</b>: ".utf8_decode($nome)."<br>
+			<b>Nome</b>: ".($nome)."<br>
 			<b>E-mail</b>: ".$email."<br>
 			<b>Telefone</b>: ".$telefone."<br>
-			<b>Assunto</b>: ".utf8_decode($assunto)."<br>
-			<b>Mensagem</b>: ".utf8_decode($mensagem)."<br>
+			<b>Assunto</b>: ".($assunto)."<br>
+			<b>Mensagem</b>: ".($mensagem)."<br>
 			</p>
 			<p>Este e um e-mail enviado pelo site www.atitudeintegrada.com.br.</p>
 			<p>Atitude Integrada</p>
@@ -28,22 +28,22 @@ function envia_contato($nome,$email,$telefone,$assunto,$mensagem) {
 	
 		try {
 		$mail->SMTPSecure = "ssl"; // tbm já tentei tls
-		$mail->Host = "mail.atitudeintegrada.com.br"; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
-		$mail->SMTPAuth   = false;  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
-		$mail->Port       = 465; //  Usar 587 porta SMTP
+		$mail->Host = "email-ssl.com.br"; // Endereço do servidor SMTP (Autenticação, utilize o host smtp.seudomínio.com.br)
+		$mail->SMTPAuth   = true;  // Usar autenticação SMTP (obrigatório para smtp.seudomínio.com.br)
+		$mail->Port       = 587; //  Usar 587 porta SMTP
 		$mail->Username = 'formulario@atitudeintegrada.com.br'; // Usuário do servidor SMTP (endereço de email)
 		$mail->Password = 'A=gY*6d([M@L'; // Senha do servidor SMTP (senha do email usado)
 	
 		//Define o remetente
 		// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=    
-		$mail->SetFrom('atitudeintegrada@atitudeintegrada.com.br', 'Site'); //Seu e-mail
+		$mail->SetFrom('atendimento@atitudeintegrada.com.br', 'Site'); //Seu e-mail
 		$mail->AddReplyTo($email, $nome); //Seu e-mail
-		$mail->Subject = utf8_decode($assunto);//Assunto do e-mail
+		$mail->Subject = ($assunto);//Assunto do e-mail
 	
 	
 		//Define os destinatário(s)
 		//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-		$mail->AddAddress('atitudeintegrada@atitudeintegrada.com.br', 'Atitude Integrada');
+		$mail->AddAddress('atendimento@atitudeintegrada.com.br', 'Atitude Integrada');
 		$mail->AddBCC('edsongaldino@datapix.com.br', 'Datapix Tecnologia'); // Copia
 		//Campos abaixo são opcionais 
 		//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
