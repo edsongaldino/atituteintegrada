@@ -36,10 +36,10 @@ elseif($_POST["acao"] == "envia-form-contato-rapido"){
         
         if($status_contato) {
             $status_envio = "sucesso";
-            redireciona("confirma-contato/$status_envio/"."sucesso");
+            //redireciona("confirma-contato/$status_envio/"."sucesso");
         } else {
             $status_envio = "erro";
-            redireciona("confirma-contato/$status_envio/"."erro");
+            //redireciona("confirma-contato/$status_envio/"."erro");
         }
     
 }else{
