@@ -105,7 +105,7 @@ $numeros_recaptcha = substr(str_shuffle("0123456789"), 0, 3);
 					<div id="getting-started"></div>
 				</h1>
 
-				<h2 class="text-intro opacity-0">Um evento que vai mudar a sua vida!</h2>
+				<h2 class="text-intro opacity-0">Treinamento de Desenvolvimento Humano</h2>
 
 				<nav>
 					<ul>
@@ -123,9 +123,10 @@ $numeros_recaptcha = substr(str_shuffle("0123456789"), 0, 3);
 			<!-- Social icons -->
 			<div class="social-icons">
 
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-instagram"></i></a>
-				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="https://wa.me/5565999091975?text=Gostaria de mais informações sobre o treinamento"><i class="fa fa-whatsapp fa-2x"></i></a>
+				<a href="#"><i class="fa fa-facebook fa-2x"></i></a>
+				<a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+				
 
 			</div>
 
