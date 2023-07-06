@@ -1,8 +1,7 @@
 <?php
+header('Content-Type: text/html; charset=UTF-8');
 include("site-mod-include.php");
-
-// Inclui o arquivo class.phpmailer.php localizado na pasta class
-require_once("ferramenta/PHPMailer/class.phpmailer.php");
+require_once('ferramenta/PHPMailer/PHPMailerAutoload.php');
 
 if($_POST["acao"] == "envia-form-contato"){
 
