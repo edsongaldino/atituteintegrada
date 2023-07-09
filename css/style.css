@@ -67,7 +67,7 @@ footer, header, hgroup, menu, nav, section, main {
 
 body {
   line-height: 1;
-  background: url(img/bg-site.jpg) no-repeat center center fixed; 
+  background: url(../img/bg-site.jpg) no-repeat center center fixed !important; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -274,7 +274,7 @@ body {
   position: absolute;
   height: 100%;
 
-  background: url(../img/bg-site.jpg) no-repeat center center fixed; 
+  background: url(../img/bg-site.jpg) no-repeat center center fixed !important; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1796,8 +1796,9 @@ footer p {
   .social-icons {
     left: 0;
     bottom: 0;
-    margin-left: 0;
-    margin-bottom: 0;
+    margin-left: 30%;
+    margin-bottom: 10px;
+    text-align: center;
   }
 
   #right-side {

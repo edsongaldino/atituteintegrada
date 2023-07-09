@@ -640,12 +640,6 @@ $numeros_recaptcha = substr(str_shuffle("0123456789"), 0, 3);
 	<!-- Contact form plugin -->
 	<script src="js/contact-me.js"></script>
 
-	<!-- Slideshow/Image plugin -->
-	<script src="js/vegas-youtube-mobile.js"></script>
-
-	<!-- YouTube plugin -->
-	<script src="js/jquery.mb.YTPlayer.js"></script>
-
 	<!-- Scroll plugin -->
 	<script src="js/jquery.mousewheel.js"></script>
 
