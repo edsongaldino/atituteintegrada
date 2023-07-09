@@ -650,6 +650,12 @@ $numeros_recaptcha = substr(str_shuffle("0123456789"), 0, 3);
 	<script src="js/classie.js"></script>
 	<script src="js/dialogFx.js"></script>
 
+	<!-- PhotoSwipe Core JS file -->
+	<script src="js/photoswipe.js"></script> 
+
+	<!-- PhotoSwipe UI JS file -->
+	<script src="js/photoswipe-ui-default.js"></script>
+
 	<!-- Countdown plugin -->
 	<script src="js/jquery.countdown.js"></script>
 
