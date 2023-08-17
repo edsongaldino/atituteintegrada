@@ -662,7 +662,7 @@ $numeros_recaptcha = substr(str_shuffle("0123456789"), 0, 3);
 	<script>
 	$("#getting-started")
 		// Year/Month/Day Hour:Minute:Second
-		.countdown("2023/08/04 18:30:30", function(event) {
+		.countdown("2023/09/29 18:30:30", function(event) {
 			$(this).text(
 				event.strftime('%D Dias %Hh %Mm %Ss')
 			);
