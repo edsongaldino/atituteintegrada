@@ -106,6 +106,8 @@ $numeros_recaptcha = substr(str_shuffle("0123456789"), 0, 3);
 				</h1>
 
 				<h2 class="text-intro opacity-0">Treinamento de Desenvolvimento Humano</h2>
+				<h3 class="text-intro opacity-0"><i class="fa fa-calendar" aria-hidden="true"></i> 22, 23 e 24 de Novembro</h3>
+				<h3 class="text-intro opacity-0"><i class="fa fa-map-marker" aria-hidden="true"></i> Hotel Araçá - Capão da Canoa - RS</h3>
 
 				<nav>
 					<ul>
@@ -662,7 +664,7 @@ $numeros_recaptcha = substr(str_shuffle("0123456789"), 0, 3);
 	<script>
 	$("#getting-started")
 		// Year/Month/Day Hour:Minute:Second
-		.countdown("2023/09/29 18:30:30", function(event) {
+		.countdown("2024/11/22 18:30:30", function(event) {
 			$(this).text(
 				event.strftime('%D Dias %Hh %Mm %Ss')
 			);
